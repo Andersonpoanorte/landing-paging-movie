@@ -1,0 +1,129 @@
+@use 'variaveis';
+
+$breakpoints: (
+    "small": 450px,
+    "medium": 768px,
+    "large": 1300px,
+);
+
+@mixin breakpoint($size) {
+    @media only screen and (max-width: map-get($breakpoints, $size)) {
+      @content;
+    }
+  }
+
+.header__bg {
+    position: sticky;
+    top: 0;
+    background-color: variaveis.$corFundo;
+    display: block;
+    .header__container {
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 20px;
+        z-index: 1;
+
+
+        .header__logo {
+            width: 150px;
+            height: 30px;
+            color: #fff;
+            display: block;
+        }
+
+       .header__nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+       }
+
+       .header__links {
+            display: flex;
+            gap: 45px;
+            align-items: center;   
+            
+            @include breakpoint("medium") {
+                display: none;
+                margin: 0 10px;
+              }
+       }
+
+       .header__item {
+        cursor: pointer;
+        color: #aaaa9b;
+        transition: all ease .5s;
+
+        &:hover {
+            transform: scale(1.1);
+        
+        }
+        
+        a {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #aaaa9b;
+
+            &:hover {
+                color: #fff;
+            }
+        }
+       }
+       
+       .menu__hamburguer {
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index:  99;
+        height: 100vh;
+        width: 100vw;
+        align-items: start;
+
+        @include breakpoint("large, small, medium" ) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index:  999;
+          }        
+
+        .box__menu__close {
+            display: flex;
+            gap: 20px;
+
+        }
+
+        a {
+            margin-top: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #aaaa9b;
+        }
+        }
+
+        .menu__item {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+    }  
+
+    .header__menuline {
+        @include breakpoint("medium") {
+            display: block;
+          }
+    }
+    
+}
+
+@media (max-width: 1500px) {
+    .menuLine {
+      display: none;
+    }
+  }
+
+
+

@@ -1,0 +1,209 @@
+$breakpoints: (
+    "small": 450px,
+    "medium": 992px,
+    "large": 1300px,
+);
+
+
+
+.hero {
+    background-image: url(/src/images/lord05.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+
+
+    .hero__container {
+        height: 100vh;
+        max-width: 1500px;
+        margin: 0 50px;
+        padding-top: 70px;
+        align-items: center;
+    }
+
+    .hero__content {
+        margin: auto 0;
+        padding: 0px 10px;
+
+        .hero__title {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-top: 36px;
+            margin-bottom: 60px;
+            max-width: 520px;
+        }
+
+        .hero__descricao {
+            font-size: 1.2rem;
+            max-width: 850px;
+            margin-bottom: 16px;
+            line-height: 28px;
+            font-weight: bold;
+        }
+
+        .hero__content__sup {
+            display: flex;
+            column-gap: 16px;
+            text-align: center;
+            margin-bottom: 10px;
+
+            .font-grey {
+                font-size: 1.2rem;
+                color: #aaaa9b;
+                font-weight: 500;
+                line-height: 28px;
+            }
+
+            .font-grey--icon {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+
+                .font-grey--icons {
+                    background-color: #33373D;
+                    padding: 0px 6px 0px 6px;
+                    border-radius: 3px;
+                }
+
+                .font-grey--icons16 {
+                    display: flex;
+                    align-items: center;
+                }
+
+                .font-grey--icons17 {
+                    background-color: #33373D;
+                    align-items: center;
+                    padding: 2px 1px 0px 1px;
+                    border-radius: 3px;
+                }
+            }
+
+        }
+
+        .hero__content__link {
+
+            .content__links ul {
+                display: flex;
+                flex-wrap: wrap;
+                column-gap: 16px;
+                font-size: 1.2rem;
+                margin-bottom: 40px;
+    
+                .content__item--under a {
+                    text-decoration: underline;
+                    font-weight: 500;
+                }
+    
+                .content__item a {
+                    color: #aaaa9b;
+                }
+            }
+        }
+
+        .assine__prime {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            text-align: center;
+
+            h3 {
+                font-size: 1.13rem;
+                line-height: 25px;
+            }
+        }
+
+        .content__buttons__link {
+            display: flex;
+            column-gap: 16px;
+            align-items: center;
+            margin-bottom: 20px;
+
+            .buttons__link {
+                background-color: #33373D;
+                border-radius: 8px;
+                color: #ffffff;
+                padding: 8px 21px;
+                font-size: 1.25rem;
+                line-height: 23px;
+                text-align: left;
+                border: none;
+                cursor: pointer;
+                transition: ease-in-out .2s;
+
+                .button__title {
+                    font-size: 1rem;
+                }
+            }
+
+            .buttons__link:hover {
+                background-color: #ffffff;
+                transform: scale(1.08);
+
+                .buttons__item,
+                .button__title {
+                    color: #33373D;
+                }
+            }
+            
+            .buttons__item {
+                display: flex;         
+            }
+        }
+
+        .content__box__buttons {
+            display: flex;
+            align-items: center;
+            font-size: 1.3rem;
+            gap: 12px;
+            margin-left: 10px;
+            
+
+            .ball {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 65px;
+                height: 65px;
+                border-radius: 50%;
+                font-size: 1.3rem;
+                background-color: #33373D;
+                border: none;
+                transition: all ease .2s;
+                
+                svg {
+                    align-items: center;
+                    justify-content: center;
+                    fill: white;
+                }
+            }
+
+            .ball:hover {
+                transform: scale(1.1);
+                background-color: #ffffff;
+                
+                svg:hover {
+                    fill: #33373D;
+                }
+         
+            }
+        
+        }
+
+        .content_text p {
+            font-size: 1.13rem;
+            color: #aaaa9b;
+        }
+
+        #content__text_none {
+            display: none;
+            
+           
+        }
+    }
+
+
+}
+

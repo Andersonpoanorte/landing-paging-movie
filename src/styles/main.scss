@@ -1,0 +1,54 @@
+@use 'variaveis';
+@use 'header';
+@use 'hero';
+@use 'related';
+@use 'details';
+@use 'footer';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Amazon, sans-serif;
+    color: #fff;
+    text-decoration: none;
+    list-style: none;
+}
+
+@font-face {
+    font-family: Amazon;
+    src: url(../../assets/fonts/AmazonEmber_W_Bd.woff2);
+    font-weight: 700;
+}
+
+@mixin text($fontSize: 18px) {
+    font-size: 20px;
+    line-height: 24px;
+    color: #fff;
+}
+
+@mixin title($fontsize: 50px) {
+    font-size: 50px;
+    color: #fff;
+}
+
+
+body {
+    padding: 0px 15px;
+    overflow-x: hidden;
+    background-color: variaveis.$corFundo;
+}
+
+
+
+.text--small {
+    @include text(20px);
+}
+
+.text--medium {
+    @include text(18px);
+}
+
+.title {
+    @include title(50px);
+}
